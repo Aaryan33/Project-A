@@ -47,6 +47,7 @@ class OrderModel {
   final List<TripAttachment> attachments;
   final String status;
   final String createdBy;
+  final String? updatedBy;
   final DateTime createdAt;
   final DateTime updatedAt;
   final Map<String, dynamic> customFields;
@@ -72,6 +73,7 @@ class OrderModel {
     this.attachments = const [],
     required this.status,
     required this.createdBy,
+    this.updatedBy,
     required this.createdAt,
     required this.updatedAt,
     this.customFields = const {},
@@ -123,6 +125,7 @@ class OrderModel {
     List<TripAttachment>? attachments,
     String? status,
     String? createdBy,
+    String? updatedBy,
     DateTime? createdAt,
     DateTime? updatedAt,
     Map<String, dynamic>? customFields,
@@ -148,6 +151,7 @@ class OrderModel {
       attachments: attachments ?? this.attachments,
       status: status ?? this.status,
       createdBy: createdBy ?? this.createdBy,
+      updatedBy: updatedBy ?? this.updatedBy,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
       customFields: customFields ?? this.customFields,
@@ -176,6 +180,7 @@ class OrderModel {
       'attachments': attachments.map((a) => a.toMap()).toList(),
       'status': status,
       'createdBy': createdBy,
+      'updatedBy': updatedBy,
       'createdAt': createdAt.toIso8601String(),
       'updatedAt': updatedAt.toIso8601String(),
       'customFields': customFields,
@@ -218,6 +223,7 @@ class OrderModel {
       attachments: parsedAttachments,
       status: map['status'] ?? 'Completed',
       createdBy: map['createdBy'] ?? 'Admin',
+      updatedBy: map['updatedBy'],
       createdAt: DateTime.parse(map['createdAt'] ?? DateTime.now().toIso8601String()),
       updatedAt: DateTime.parse(map['updatedAt'] ?? DateTime.now().toIso8601String()),
       customFields: Map<String, dynamic>.from(map['customFields'] ?? {}),
