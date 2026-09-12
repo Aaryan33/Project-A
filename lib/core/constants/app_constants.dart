@@ -3,8 +3,8 @@ class AppConstants {
   static const String appSubtitle = 'Order & Trip Management System';
 
   // Companies
-  static const String companyUmiya = 'name name';
-  static const String companyPnj = 'name';
+  static const String company1 = 'name name';
+  static const String company2 = 'name';
   static const List<String> companies = [companyUmiya, companyPnj];
 
   // Materials
@@ -16,7 +16,7 @@ class AppConstants {
   // Order Statuses
   static const String statusPending = 'Pending';
   static const String statusInTransit = 'In Transit';
-  static const String statusDelivered = 'Delivered';
+  // static const String statusDelivered = 'Delivered';
   static const String statusCompleted = 'Completed';
   static const List<String> orderStatuses = [
     statusPending,
@@ -37,9 +37,6 @@ class AppConstants {
     'Miscellaneous',
   ];
 
-  // Demo Admin Credentials
-  static const String defaultAdminEmail = 'admin.com';
-  static const String defaultAdminPassword = 'admin123';
 }
 
 
