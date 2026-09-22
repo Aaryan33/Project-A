@@ -157,7 +157,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> with SingleTickerPr
                           ),
                         ),
                         const SizedBox(height: 22),
-                        // Main Title: UMIYA IMPEX & PNJ VENTURES
+                        
                         const Text(
                           'Business Name',
                           style: TextStyle(
